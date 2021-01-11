@@ -1,0 +1,21 @@
+ALGORITHM SORTING
+VAR
+    l,tmp,i,j:INTEGER;
+    tab: ARRAY_OF INTEGER;
+
+
+BEGIN
+    l := tab.length;
+
+FOR i FROM 1 TO l-1 STEP 1  DO
+    tmp:= tab[i]
+    j:=i-1;
+        WHILE (j >= 0 && tab[j] > tmp)  DO
+           tab[j+1] = tab[j]
+           j--;
+        END_WHILE
+    tab[j+1] = tmp;
+  
+END_FOR
+
+END
